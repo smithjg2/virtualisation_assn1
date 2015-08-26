@@ -4,7 +4,6 @@ MAINTAINER Joshua Smithe <smithjg2@student.op.ac.nz>
 RUN apt-get -yqq update
 RUN apt-get -yqq upgrade
 RUN apt-get -yqq install apache2
-
 RUN apt-get -yqq install supervisor
 
 ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
