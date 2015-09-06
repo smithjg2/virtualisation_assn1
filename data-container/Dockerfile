@@ -8,4 +8,4 @@ COPY index.html /var/www/html/index.html
 
 VOLUME [ "var/www/html" ]
 
-ENTRYPOINT exec
+ENTRYPOINT exec top -b
