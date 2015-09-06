@@ -8,4 +8,4 @@ COPY index.html /var/www/html/index.html
 
 VOLUME [ "var/www/html" ]
 
-ENTRYPOINT exec top -b
+ENTRYPOINT [ "/usr/bin/tail -f /dev/null" ]
