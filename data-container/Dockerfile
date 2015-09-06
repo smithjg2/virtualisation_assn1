@@ -7,3 +7,5 @@ RUN apt-get -y upgrade
 COPY index.html /var/www/html/index.html
 
 VOLUME [ "var/www/html" ]
+
+ENTRYPOINT exec
