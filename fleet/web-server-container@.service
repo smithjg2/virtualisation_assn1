@@ -12,4 +12,4 @@ ExecStart=/usr/bin/docker run --rm --volumes-from data-container1 --name web-ser
 ExecStop=/usr/bin/docker stop web-server-container1
 
 [X-Fleet]
-Conflicts=web-server@*.service
+Conflicts=web-server@*.service 
