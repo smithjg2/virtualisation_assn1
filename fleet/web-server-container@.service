@@ -8,8 +8,8 @@ TimeoutStartSec=0
 ExecStartPre=-/usr/bin/docker kill web-server-container1
 ExecStartPre=-/usr/bin/docker rm web-server-container1
 ExecStartPre=/usr/bin/docker pull smithjg2/virtualisation_assn1_web
-ExecStart=/usr/bin/docker run --rm --volumes-from data-container1 --name web-server-container1 smithjg2/virtualisation_assn1_web -D FOREGROUND
+ExecStart=/usr/bin/docker run --volumes-from data-container1 --rm --name web-server-container1 smithjg2/virtualisation_assn1_web
 ExecStop=/usr/bin/docker stop web-server-container1
 
 [X-Fleet]
-Conflicts=web-server@*.service 
+Conflicts=web-server@*.service
