@@ -8,4 +8,4 @@ COPY index.html /var/www/html/index.html
 
 VOLUME [ "var/www/html" ]
 
-ENTRYPOINT [ "/user/bin/tail", "-f", "/dev/null" ]
+ENTRYPOINT [ "/bin/sh", "-c", "while true; do echo; ready; sleep 60; done" ]
