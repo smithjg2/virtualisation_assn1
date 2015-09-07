@@ -5,11 +5,11 @@ Requires=data-container@%i.service
 
 [Service]
 TimeoutStartSec=0
-ExecStartPre=-/usr/bin/docker kill web-server1
-ExecStartPre=-/usr/bin/docker rm web-server1
+ExecStartPre=-/usr/bin/docker kill web-server-container1
+ExecStartPre=-/usr/bin/docker rm web-server-container1
 ExecStartPre=/usr/bin/docker pull smithjg2/virtualisation_assn1_web
 ExecStart=/usr/bin/docker run --rm --name web-server1 smithjg2/virtualisation_assn1_web --volumes-from data-container1 -D FOREGROUND
-ExecStop=/usr/bin/docker stop web-server1
+ExecStop=/usr/bin/docker stop web-server-container1
 
 [X-Fleet]
 Conflicts=web-server@*.service
