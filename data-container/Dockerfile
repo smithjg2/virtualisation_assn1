@@ -8,4 +8,4 @@ COPY index.html /var/www/html/index.html
 
 VOLUME [ "var/www/html" ]
 
-ENTRYPOINT [ "/usr/bin/tail -f /dev/null" ]
+ENTRYPOINT [ "/user/bin/tail", "-f", "/dev/null" ]
