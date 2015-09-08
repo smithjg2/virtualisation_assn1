@@ -9,7 +9,7 @@ ExecStartPre=-/usr/bin/docker kill load-balancer1
 ExecStartPre=-/usr/bin/docker rm load-balancer1
 ExecStartPre=/usr/bin/docker pull tclark/assn1-load-balancer
 ExecStart=/usr/bin/docker run --rm --name load-balancer1 -p 80:80 tclark/assn1-load-balancer
-ExecStop=/usr/bin/docker stop web-server-container1
+ExecStop=/usr/bin/docker stop load-balancer1
 
 [X-Fleet]
 Conflicts=web-server-container@*.service
